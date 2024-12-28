@@ -2,7 +2,7 @@
 
 namespace Core.DI;
 
-public static class Startup
+public static class Extensions
 {
     public static IServiceCollection AddServices(this IServiceCollection services) =>
         services

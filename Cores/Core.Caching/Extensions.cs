@@ -7,7 +7,7 @@ using System.Text.Json.Serialization;
 
 namespace Core.Caching;
 
-public static class Startup
+public static class Extensions
 {
     public static IServiceCollection AddCaching(this IServiceCollection services, IConfiguration configuration)
     {
