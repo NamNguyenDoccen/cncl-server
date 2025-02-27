@@ -1,0 +1,37 @@
+@Learning.API_HostAddress = https://localhost:7117/api/v1
+
+### Create a new course resource
+POST {{Learning.API_HostAddress}}/courses
+Content-Type: application/json
+Accept: application/json
+
+{
+  "title": "Sample Title",
+  "description": "Sample Description",
+  "author": "Author Name"
+}
+
+###
+
+### Get a specific course resource by ID
+GET {{Learning.API_HostAddress}}/courses/00080000-ac17-0242-1196-08dbe29a6434
+Accept: application/json
+
+###
+
+### Update a specific course resource by ID
+PUT {{Learning.API_HostAddress}}/courses/00080000-ac17-0242-1196-08dbe29a6434
+Content-Type: application/json
+Accept: application/json
+
+{
+  "title": "Updated Title",
+  "description": "Updated Description",
+  "author": "Updated Author Name"
+}
+
+###
+
+### Delete a specific course resource by ID
+DELETE {{Learning.API_HostAddress}}/courses/00080000-ac17-0242-1196-08dbe29a6434
+Accept: application/json

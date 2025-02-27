@@ -1,15 +1,21 @@
-﻿namespace Core.Domain;
+﻿using Core.Domain.Contracts;
 
-public abstract class AuditableEntity : BaseEntity, IAuditableEntity
+namespace Core.Domain;
+
+public class AuditableEntity<TId> : BaseEntity<TId>, IAuditable, ISoftDelete
+{
+    public DateTimeOffset Created { get; set; }
+    public Guid CreatedBy { get; set; }
+    public DateTimeOffset? Deleted { get; set; }
+    public Guid? DeletedBy { get; set; }
+    public DateTimeOffset? LastModified { get; set; }
+    public Guid? LastModifiedBy { get; set; }
+}
+
+public abstract class AuditableEntity : AuditableEntity<Guid>
 {
     protected AuditableEntity()
     {
-        CreatedOn = DateTime.UtcNow;
-        LastModifiedOn = DateTime.UtcNow;
+        Id = Guid.CreateVersion7();
     }
-
-    public Guid CreatedBy { get; set; }
-    public DateTime CreatedOn { get; set; }
-    public Guid? LastModifiedBy { get; set; }
-    public DateTime? LastModifiedOn { get; set; }
 }
