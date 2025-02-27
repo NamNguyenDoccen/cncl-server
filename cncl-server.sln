@@ -39,7 +39,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Learning.Infrastructure", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "Cores\Core\Core.csproj", "{1C7F2D32-BDF9-4093-BD29-B3FBAB43976A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core.Persistence", "Core.Persistence\Core.Persistence.csproj", "{79A95516-91BA-4788-BB09-1F144B31A6D2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core.Persistence", "Cores\Core.Persistence\Core.Persistence.csproj", "{79A95516-91BA-4788-BB09-1F144B31A6D2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
